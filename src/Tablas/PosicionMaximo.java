@@ -1,0 +1,44 @@
+package Tablas;
+
+import java.util.Scanner;
+
+public class PosicionMaximo
+{
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+
+		int suma =0;
+		int maximo;
+		int minimo;
+		int []tabla = new int[10];
+		for (int i=0;i<=9;i++)
+		{
+			tabla[i] = 0;
+		}
+		for (int i=0;i<=9;i++)
+		{
+			System.out.println("Indique el valor de la tabla en la posición " +i);
+			tabla[i] = teclado.nextInt();
+		}
+		maximo = tabla [0];
+		for (int i = 0; i <=9;i++)
+		{
+
+			if (tabla[i]>maximo)
+			{
+				maximo=tabla[i];
+			}
+		}
+		System.out.println("El número máximo de los indicados es : "+maximo);
+		for (int i=0;i<=9;i++)
+		{
+			if(tabla[i]==maximo)
+			{
+				System.out.println(i);
+				teclado.close();
+			}
+		}
+	}
+}
+
